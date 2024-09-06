@@ -1,4 +1,5 @@
 **ABOUT**
+
 Thats a clone of mobile game "merge fellas"
 React was used but game programmed on vanillaJS@canvas
 
