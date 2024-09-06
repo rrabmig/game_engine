@@ -28,13 +28,16 @@ function App(): JSX.Element {
 
     engine.addEntity(new ScoreBar(new Point(140, 390), 200));
 
-    // engine.addEntity(new CircleBody(new Circle(new Point(100, 200), 10), new Vector2D(500, -30), gameConfig.gravity));
-    // engine.addEntity(new CircleBody(new Circle(new Point(200, 200), 10), new Vector2D(200, -50), gameConfig.gravity));
-    // engine.addEntity(new CircleBody(new Circle(new Point(300, 200), 10), new Vector2D(100, -100), gameConfig.gravity));
+    engine.addEntity(new CircleBody(new Circle(new Point(100, 200), 10), new Vector2D(500, -30), gameConfig.gravity));
+    engine.addEntity(new CircleBody(new Circle(new Point(200, 200), 10), new Vector2D(200, -50), gameConfig.gravity));
+    engine.addEntity(new CircleBody(new Circle(new Point(300, 200), 10), new Vector2D(100, -100), gameConfig.gravity));
     animate();
   });
   return (
-    <canvas ref={canvas} width="400" height="400" style={{ border: "1px solid black" }}></canvas>
+    <div style={{width:'100%', height:'100%', display:'flex'}}>
+      <canvas ref={canvas} width="400" height="400" style={{ border: "1px solid black" , margin: "auto"}}></canvas>
+    </div>
+    
   );
 }
 
